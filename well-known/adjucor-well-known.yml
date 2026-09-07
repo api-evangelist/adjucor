@@ -1,0 +1,145 @@
+generated: '2026-09-07'
+method: probed
+source: >-
+  Live HTTP probes of the RFC 8615 named path list on every host this record knows —
+  the registrable domain adjucor.com, its www host, and cloud.adjucor.com (the only
+  other host that resolves in DNS).
+description: >-
+  AdjuCor publishes no /.well-known/ document of its own. adjucor.com is a WordPress
+  site whose router answers every non-page path — including a random control path —
+  with the same 2,679-byte "WordPress > Error" page under HTTP 500, so every named path
+  is a hard miss rather than a 404. cloud.adjucor.com is a self-hosted Nextcloud 25.0.3
+  appliance (login-walled) that answers the named paths with an explicit JSON
+  "<name> not supported" 404; the one 200 it returns, /.well-known/security.txt, is the
+  UPSTREAM NEXTCLOUD DEFAULT shipped with that software — it names hackerone.com/nextcloud
+  as the contact and policy and expired 2023-04-30 — so it documents Nextcloud GmbH's
+  disclosure program, not AdjuCor's, and is recorded here as not-a-real-document for this
+  provider. No WellKnown or SecurityTxt pointer is emitted from this probe.
+hosts:
+- host: adjucor.com
+  note: >-
+    WordPress. A random control path (/zz-api-evangelist-control-9f3a) returns the identical
+    2,679-byte HTTP 500 error page, confirming these are the site's generic not-found handler.
+  documents:
+  - path: /.well-known/security.txt
+    status: 500
+    file: null
+    real_document: false
+  - path: /.well-known/openid-configuration
+    status: 500
+    file: null
+    real_document: false
+  - path: /.well-known/oauth-authorization-server
+    status: 500
+    file: null
+    real_document: false
+  - path: /.well-known/oauth-protected-resource
+    status: 500
+    file: null
+    real_document: false
+  - path: /.well-known/api-catalog
+    status: 500
+    file: null
+    real_document: false
+  - path: /.well-known/ai-plugin.json
+    status: 500
+    file: null
+    real_document: false
+  - path: /.well-known/agent-card.json
+    status: 500
+    file: null
+    real_document: false
+  - path: /.well-known/agent.json
+    status: 500
+    file: null
+    real_document: false
+  - path: /.well-known/aauth-resource.json
+    status: 500
+    file: null
+    real_document: false
+- host: www.adjucor.com
+  note: Same WordPress origin as the apex; identical 500 error page on every named path.
+  documents:
+  - path: /.well-known/security.txt
+    status: 500
+    file: null
+    real_document: false
+  - path: /.well-known/openid-configuration
+    status: 500
+    file: null
+    real_document: false
+  - path: /.well-known/oauth-authorization-server
+    status: 500
+    file: null
+    real_document: false
+  - path: /.well-known/oauth-protected-resource
+    status: 500
+    file: null
+    real_document: false
+  - path: /.well-known/api-catalog
+    status: 500
+    file: null
+    real_document: false
+  - path: /.well-known/ai-plugin.json
+    status: 500
+    file: null
+    real_document: false
+  - path: /.well-known/agent-card.json
+    status: 500
+    file: null
+    real_document: false
+  - path: /.well-known/agent.json
+    status: 500
+    file: null
+    real_document: false
+  - path: /.well-known/aauth-resource.json
+    status: 500
+    file: null
+    real_document: false
+- host: cloud.adjucor.com
+  note: >-
+    Self-hosted Nextcloud 25.0.3 file-sharing appliance behind a login (status.php reports
+    productname Nextcloud). Off-the-shelf third-party software AdjuCor runs, not an AdjuCor
+    API product, so nothing here is credited to AdjuCor.
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    real_document: false
+    content_type: text/plain
+    reason: >-
+      Served, but it is the vendor-default security.txt that ships with Nextcloud —
+      Contact/Policy hackerone.com/nextcloud, Expires 2023-04-30 — and asserts nothing
+      about AdjuCor. Not a real document for this provider; miss.
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+    real_document: false
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+    real_document: false
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+    real_document: false
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+    real_document: false
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+    real_document: false
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+    real_document: false
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+    real_document: false
+  - path: /.well-known/aauth-resource.json
+    status: 404
+    file: null
+    real_document: false

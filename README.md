@@ -64,5 +64,7 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Adjucor is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
+AdjuCor GmbH is a Munich, Germany medical device company, founded in 2012, that develops reBEAT — an implantable, patient-specific cardiac support system for advanced heart failure. reBEAT is an epicardial device that conforms to the outside of the heart and delivers uni- or biventricular mechanical circulatory support without ever contacting blood. AdjuCor is a hardware manufacturer rather than a software business, and publishes no developer program, public API, SDK, or machine-readable API contract on any host it operates.
+
+- https://adjucor.com/
 - https://equityzen.com/company/adjucor
