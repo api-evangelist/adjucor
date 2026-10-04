@@ -1,5 +1,5 @@
 aid: adjucor
-name: AdjuCor GmbH
+name: AdjuCor
 description: >-
   AdjuCor GmbH is a Munich, Germany medical device company, founded in 2012, that develops reBEAT — an
   implantable, patient-specific cardiac support system for advanced heart failure. reBEAT is an epicardial
@@ -119,3 +119,4 @@ x-coverage:
   - url: https://api.github.com/orgs/adjucor
     status: 404
   checked: '2026-09-07'
+x-legal-name: AdjuCor GmbH
