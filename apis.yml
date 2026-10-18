@@ -27,7 +27,7 @@ tags:
 - Heart Failure
 - Implantable Devices
 - Mechanical Circulatory Support
-- MedTech
+- Medical Technology
 - Germany
 tags_raw:
 - Company
@@ -39,6 +39,7 @@ tags_raw:
 - Mechanical Circulatory Support
 - Medtech
 - Germany
+- MedTech
 apis: []
 maintainers:
 - FN: Kin Lane
